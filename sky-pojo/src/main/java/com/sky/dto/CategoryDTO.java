@@ -18,5 +18,6 @@ public class CategoryDTO implements Serializable {
 
     //排序
     private Integer sort;
+    // 添加一个
 
 }
