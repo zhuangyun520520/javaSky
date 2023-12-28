@@ -26,7 +26,7 @@ public class DishController {
     private RedisTemplate redisTemplate;
 
     /**
-     * 根据分类id查询菜品
+     * 根据分类id查询菜品，并添加到缓存中
      *
      * @param categoryId
      * @return
@@ -45,6 +45,7 @@ public class DishController {
             return Result.success(list);
         }
 
+        //构造查询条件
         Dish dish = new Dish();
         dish.setCategoryId(categoryId);
         dish.setStatus(StatusConstant.ENABLE);//查询起售中的菜品
