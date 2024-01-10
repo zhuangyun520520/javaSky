@@ -165,7 +165,7 @@ public class WeChatPayUtil {
      */
     public JSONObject pay(String orderNum, BigDecimal total, String description, String openid) throws Exception {
         //统一下单，生成预支付交易单
-        String bodyAsString = jsapi(orderNum, total, description, openid);
+        String bodyAsString = jsapi(orderNum, total, description, openid);//返回预支付交易标识
         //解析返回结果
         JSONObject jsonObject = JSON.parseObject(bodyAsString);
         System.out.println(jsonObject);
